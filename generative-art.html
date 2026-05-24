@@ -1,0 +1,115 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>Generative Art</h1>
+            <p>File #14 of 20 • p5.js algorithmic art • heughan‑outreach.com</p>
+            <p>Real‑time generative algorithms with interactive parameter controls.</p>
+        </header>
+        
+        <div class="art-section">
+            <div class="canvas-container">
+                
+            </div>
+            
+            <div class="control-panel">
+                <h2 class="panel-title">Algorithm Controls</h2>
+                
+                <div class="algorithm-selector">
+                    <button class="algo-btn active" data-algo="flowField">Flow Field</button>
+                    <button class="algo-btn" data-algo="voronoi">Voronoi</button>
+                    <button class="algo-btn" data-algo="particleSystem">Particles</button>
+                    <button class="algo-btn" data-algo="recursiveTree">Recursive Tree</button>
+                    <button class="algo-btn" data-algo="cellularAutomata">Cellular</button>
+                    <button class="algo-btn" data-algo="noiseLandscape">Noise</button>
+                </div>
+                
+                <div class="param-group">
+                    <h3 class="param-title"><i class="fas fa-sliders-h"></i> Parameters</h3>
+                    
+                    <div class="param-slider">
+                        <div class="slider-container">
+                            <span class="slider-label">Complexity</span>
+                            <input type="range" min="1" max="100" value="50" class="slider" id="complexitySlider">
+                            <span class="slider-value" id="complexityValue">50</span>
+                        </div>
+                    </div>
+                    
+                    <div class="param-slider">
+                        <div class="slider-container">
+                            <span class="slider-label">Speed</span>
+                            <input type="range" min="1" max="100" value="30" class="slider" id="speedSlider">
+                            <span class="slider-value" id="speedValue">30</span>
+                        </div>
+                    </div>
+                    
+                    <div class="param-slider">
+                        <div class="slider-container">
+                            <span class="slider-label">Scale</span>
+                            <input type="range" min="1" max="200" value="100" class="slider" id="scaleSlider">
+                            <span class="slider-value" id="scaleValue">100</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="param-group">
+                    <h3 class="param-title"><i class="fas fa-palette"></i> Color Palette</h3>
+                    <div class="color-picker">
+                        <div class="color-btn active" style="background: #ff4d8d;" data-color="#ff4d8d"></div>
+                        <div class="color-btn" style="background: #4dffea;" data-color="#4dffea"></div>
+                        <div class="color-btn" style="background: #ffd166;" data-color="#ffd166"></div>
+                        <div class="color-btn" style="background: #9d4edd;" data-color="#9d4edd"></div>
+                        <div class="color-btn" style="background: #ff6b6b;" data-color="#ff6b6b"></div>
+                        <div class="color-btn" style="background: #4ecdc4;" data-color="#4ecdc4"></div>
+                        <div class="color-btn" style="background: #ffe66d;" data-color="#ffe66d"></div>
+                        <div class="color-btn" style="background: #ff9a76;" data-color="#ff9a76"></div>
+                        <div class="color-btn" style="background: #a663cc;" data-color="#a663cc"></div>
+                        <div class="color-btn" style="background: #00bbf9;" data-color="#00bbf9"></div>
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn" id="generateBtn">Generate New</button>
+                    <button class="action-btn" id="pauseBtn">Pause/Resume</button>
+                    <button class="action-btn" id="saveBtn">Save Image</button>
+                    <button class="action-btn" id="resetBtn">Reset</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="gallery-section">
+            <div class="gallery-item" data-algo="flowField">
+                <img src="https://i1-e.pinimg.com/736x/31/35/d6/3135d6d61a600a84e50103e90f06ea66.jpg" alt="Art 1" class="gallery-img">
+                <p>Flow Field Algorithm</p>
+            </div>
+            <div class="gallery-item" data-algo="voronoi">
+                <img src="https://i1-e.pinimg.com/736x/aa/cd/17/aacd17496096cbefb8ea86a2ac7223c9.jpg" alt="Art 2" class="gallery-img">
+                <p>Voronoi Diagram</p>
+            </div>
+            <div class="gallery-item" data-algo="particleSystem">
+                <img src="https://i1-e.pinimg.com/736x/17/ed/7a/17ed7a3a2a70e10570093966770550f2.jpg" alt="Art 3" class="gallery-img">
+                <p>Particle System</p>
+            </div>
+            <div class="gallery-item" data-algo="recursiveTree">
+                <img src="https://i.pinimg.com/736x/f5/50/a5/f550a591b672a7e0ef0c9907009411dd.jpg" alt="Art 4" class="gallery-img">
+                <p>Recursive Tree</p>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Generative Art Engine</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                File 14/20 uses p5.js to create real‑time generative art. Each algorithm produces unique visual patterns 
+                based on mathematical formulas and noise functions. Part of the 250–2999 superior range project.
+            </p>
+            <div class="range-display">250–2999</div>
+            <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+        </div>
+        
+        <footer class="footer">
+            <p>File 14/20 • Batch 7 • Generative Art • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>p5.js • Algorithmic Art • Real‑time Generation • Superior Range Project</p>
+        </footer>
+    </div>
+    
+    
+

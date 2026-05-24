@@ -1,0 +1,152 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>Neural Network</h1>
+            <p>File #20 of 20 • TensorFlow.js Neural Network • heughan‑outreach.com</p>
+            <p>Interactive neural network visualization and training with TensorFlow.js in the browser.</p>
+        </header>
+        
+        <div class="nn-section">
+            <div class="visualization-container">
+                <canvas id="nnCanvas"></canvas>
+                <div class="canvas-overlay">
+                    <h3>Neural Network</h3>
+                    <p>Layers: <span id="layerCount">3</span> | Neurons: <span id="neuronCount">26</span></p>
+                    <p>Status: <span id="trainingStatus">Idle</span></p>
+                </div>
+                <div class="training-status">
+                    <div class="status-dot" id="statusDot"></div>
+                    <span id="statusText">Ready</span>
+                </div>
+            </div>
+            
+            <div class="control-panel">
+                <h2 class="panel-title">Network Controls</h2>
+                
+                <div class="network-config">
+                    <div class="config-title">Network Architecture</div>
+                    
+                    <div class="layer-config">
+                        <div class="layer-header">
+                            <span class="layer-name">Input Layer</span>
+                            <span class="layer-neurons" id="inputNeurons">2 neurons</span>
+                        </div>
+                        <div class="slider-label">
+                            <span>Neurons</span>
+                            <span id="inputValue">2</span>
+                        </div>
+                        <input type="range" min="1" max="10" value="2" class="slider neuron-slider" id="inputSlider">
+                    </div>
+                    
+                    <div class="layer-config">
+                        <div class="layer-header">
+                            <span class="layer-name">Hidden Layer 1</span>
+                            <span class="layer-neurons" id="hidden1Neurons">8 neurons</span>
+                        </div>
+                        <div class="slider-label">
+                            <span>Neurons</span>
+                            <span id="hidden1Value">8</span>
+                        </div>
+                        <input type="range" min="2" max="20" value="8" class="slider neuron-slider" id="hidden1Slider">
+                    </div>
+                    
+                    <div class="layer-config">
+                        <div class="layer-header">
+                            <span class="layer-name">Hidden Layer 2</span>
+                            <span class="layer-neurons" id="hidden2Neurons">8 neurons</span>
+                        </div>
+                        <div class="slider-label">
+                            <span>Neurons</span>
+                            <span id="hidden2Value">8</span>
+                        </div>
+                        <input type="range" min="2" max="20" value="8" class="slider neuron-slider" id="hidden2Slider">
+                    </div>
+                    
+                    <div class="layer-config">
+                        <div class="layer-header">
+                            <span class="layer-name">Output Layer</span>
+                            <span class="layer-neurons" id="outputNeurons">1 neuron</span>
+                        </div>
+                        <div class="slider-label">
+                            <span>Neurons</span>
+                            <span id="outputValue">1</span>
+                        </div>
+                        <input type="range" min="1" max="5" value="1" class="slider neuron-slider" id="outputSlider">
+                    </div>
+                </div>
+                
+                <div class="training-controls">
+                    <div class="config-title">Training Parameters</div>
+                    
+                    <div class="slider-label">
+                        <span>Learning Rate</span>
+                        <span id="learningRateValue">0.01</span>
+                    </div>
+                    <input type="range" min="0.001" max="0.1" step="0.001" value="0.01" class="slider" id="learningRateSlider">
+                    
+                    <div class="slider-label" style="margin-top: 1rem;">
+                        <span>Epochs</span>
+                        <span id="epochsValue">100</span>
+                    </div>
+                    <input type="range" min="10" max="500" value="100" class="slider" id="epochsSlider">
+                </div>
+                
+                <div class="control-buttons">
+                    <button class="control-btn" id="initBtn">Initialize Network</button>
+                    <button class="control-btn secondary" id="trainBtn">Train Network</button>
+                    <button class="control-btn" id="resetBtn">Reset Network</button>
+                    <button class="control-btn secondary" id="testBtn">Test Network</button>
+                </div>
+                
+                <div class="training-metrics">
+                    <div class="metrics-title">Training Metrics</div>
+                    <div class="metric-item">
+                        <span class="metric-label">Loss</span>
+                        <span class="metric-value" id="lossValue">0.0000</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Accuracy</span>
+                        <span class="metric-value" id="accuracyValue">0.00%</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Epoch</span>
+                        <span class="metric-value" id="epochValue">0/100</span>
+                    </div>
+                    <div class="metric-item">
+                        <span class="metric-label">Training Time</span>
+                        <span class="metric-value" id="timeValue">0.0s</span>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="lossChart"></canvas>
+                </div>
+                
+                <div class="dataset-preview">
+                    <div class="preview-title">Dataset Preview (XOR Problem)</div>
+                    <div class="preview-grid" id="datasetPreview">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">TensorFlow.js Neural Network</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                File 20/20 demonstrates neural network visualization and training in the browser using TensorFlow.js. 
+                Train a neural network to solve the XOR problem, visualize network architecture, and monitor training 
+                metrics in real‑time. Part of the 250–2999 superior range project.
+            </p>
+            <div class="range-display">250–2999</div>
+            <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+        </div>
+        
+        <footer class="footer">
+            <p>File 20/20 • Neural Network • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>TensorFlow.js • Machine Learning • Neural Networks • Visualization • Superior Range Project</p>
+        </footer>
+    </div>
+    
+    
+

@@ -1,0 +1,112 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>AI/ML in Browser</h1>
+            <p>File #16 of 20 • TensorFlow.js Machine Learning • heughan‑outreach.com</p>
+            <p>Real‑time object detection and hand pose estimation running directly in your browser using WebGL‑accelerated TensorFlow.js.</p>
+        </header>
+        
+        <div class="ai-section">
+            
+            <div class="demo-card">
+                <h2 class="card-title">Object Detection</h2>
+                
+                <div class="status-indicator">
+                    <div class="status-dot" id="objectStatus"></div>
+                    <span class="status-text" id="objectStatusText">Model loading...</span>
+                </div>
+                
+                <div class="demo-container">
+                    <video id="objectVideo" class="video-feed" autoplay="" playsinline=""></video>
+                    <canvas id="objectCanvas"></canvas>
+                    <div class="demo-overlay">
+                        <h3>Object Detection</h3>
+                        <p>Detecting: <span id="detectionCount">0</span> objects</p>
+                        <p>FPS: <span id="objectFPS">0</span></p>
+                    </div>
+                </div>
+                
+                <div class="results-panel">
+                    <div class="results-title">Detection Results</div>
+                    <div id="objectResults">
+                        <div class="result-item">
+                            <span class="result-label">No objects detected</span>
+                            <span class="result-value">--</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-controls">
+                    <button class="demo-btn" id="startObjectBtn">Start Camera</button>
+                    <button class="demo-btn secondary" id="stopObjectBtn">Stop Camera</button>
+                    <button class="demo-btn" id="uploadImageBtn">Upload Image</button>
+                    <button class="demo-btn secondary" id="toggleObjectBtn">Toggle Detection</button>
+                </div>
+            </div>
+            
+            
+            <div class="demo-card">
+                <h2 class="card-title">Hand Pose Estimation</h2>
+                
+                <div class="status-indicator">
+                    <div class="status-dot" id="poseStatus"></div>
+                    <span class="status-text" id="poseStatusText">Model loading...</span>
+                </div>
+                
+                <div class="demo-container">
+                    <video id="poseVideo" class="video-feed" autoplay="" playsinline=""></video>
+                    <canvas id="poseCanvas"></canvas>
+                    <div class="demo-overlay">
+                        <h3>Hand Pose</h3>
+                        <p>Hands: <span id="handCount">0</span></p>
+                        <p>FPS: <span id="poseFPS">0</span></p>
+                    </div>
+                </div>
+                
+                <div class="results-panel">
+                    <div class="results-title">Pose Results</div>
+                    <div id="poseResults">
+                        <div class="result-item">
+                            <span class="result-label">No hands detected</span>
+                            <span class="result-value">--</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="demo-controls">
+                    <button class="demo-btn" id="startPoseBtn">Start Camera</button>
+                    <button class="demo-btn secondary" id="stopPoseBtn">Stop Camera</button>
+                    <button class="demo-btn" id="toggleSkeletonBtn">Toggle Skeleton</button>
+                    <button class="demo-btn secondary" id="calibrateBtn">Calibrate</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="model-selector">
+            <button class="model-btn active" data-model="coco">COCO-SSD</button>
+            <button class="model-btn" data-model="mobilenet">MobileNet</button>
+            <button class="model-btn" data-model="handpose">HandPose</button>
+            <button class="model-btn" data-model="posenet">PoseNet</button>
+            <button class="model-btn" data-model="bodypix">BodyPix</button>
+            <button class="model-btn" data-model="custom">Custom Model</button>
+        </div>
+        
+        <div class="info-panel">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Browser‑Based Machine Learning</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                File 16/20 demonstrates TensorFlow.js running ML models directly in the browser. 
+                No server required—all inference happens locally using WebGL acceleration. 
+                Part of the 250–2999 superior range project.
+            </p>
+            <div class="range-display">250–2999</div>
+            <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+        </div>
+        
+        <footer class="footer">
+            <p>File 16/20 • Batch 8 • AI/ML Browser • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>TensorFlow.js • COCO‑SSD • HandPose • WebGL Acceleration • Superior Range Project</p>
+        </footer>
+    </div>
+    
+    
+

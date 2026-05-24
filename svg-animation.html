@@ -1,0 +1,192 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>SVG Animation</h1>
+            <p>File #12 of 20 • Advanced SVG animations with SMIL &amp; CSS • heughan‑outreach.com</p>
+            <p>Interactive SVG controls with real‑time manipulation and morphing animations.</p>
+        </header>
+        
+        <div class="animation-grid">
+            
+            <div class="animation-card">
+                <h2 class="card-title"><i class="fas fa-shapes"></i> Morphing Shapes</h2>
+                <div class="svg-container" id="morphContainer">
+                    <svg width="400" height="300" viewBox="0 0 400 300" id="morphSVG">
+                        <path id="morphPath" d="M100,150 C100,100 150,50 200,50 C250,50 300,100 300,150 C300,200 250,250 200,250 C150,250 100,200 100,150 Z" fill="url(#gradient1)" stroke="#00dbde" stroke-width="3">
+                            
+                        </path>
+                        <defs>
+                            <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#00dbde"></stop>
+                                <stop offset="100%" stop-color="#fc00ff"></stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <p>SVG path morphing using SMIL animations. The shape transforms between multiple states with smooth transitions.</p>
+                <div class="controls">
+                    <button class="control-btn active" data-action="playMorph">Play</button>
+                    <button class="control-btn" data-action="pauseMorph">Pause</button>
+                    <button class="control-btn" data-action="reverseMorph">Reverse</button>
+                </div>
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Animation Speed</span>
+                        <span id="speedValue">5s</span>
+                    </div>
+                    <input type="range" min="1" max="10" value="5" class="slider" id="speedSlider">
+                </div>
+            </div>
+            
+            
+            <div class="animation-card">
+                <h2 class="card-title"><i class="fas fa-atom"></i> Interactive Particles</h2>
+                <div class="svg-container" id="particleContainer">
+                    <svg width="400" height="300" viewBox="0 0 400 300" id="particleSVG">
+                        <circle id="centerCircle" cx="200" cy="150" r="40" fill="url(#gradient2)"></circle>
+                        <g id="particles"></g>
+                        <defs>
+                            <radialGradient id="gradient2" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" stop-color="#fc00ff"></stop>
+                                <stop offset="100%" stop-color="#00dbde"></stop>
+                            </radialGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <p>Interactive particle system. Move your mouse over the SVG to attract particles. Click to repel them.</p>
+                <div class="controls">
+                    <button class="control-btn active" data-action="addParticles">Add 10</button>
+                    <button class="control-btn" data-action="removeParticles">Remove 10</button>
+                    <button class="control-btn" data-action="clearParticles">Clear All</button>
+                </div>
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Particle Count</span>
+                        <span id="countValue">20</span>
+                    </div>
+                    <input type="range" min="5" max="100" value="20" class="slider" id="countSlider">
+                </div>
+            </div>
+            
+            
+            <div class="animation-card">
+                <h2 class="card-title"><i class="fas fa-draw-polygon"></i> Line Drawing</h2>
+                <div class="svg-container" id="drawContainer">
+                    <svg width="400" height="300" viewBox="0 0 400 300" id="drawSVG">
+                        <path id="drawPath" d="M50,250 L100,100 L150,200 L200,50 L250,150 L300,100 L350,200" fill="none" stroke="#fcec03" stroke-width="4" stroke-dasharray="1000" stroke-dashoffset="1000">
+                            
+                        </path>
+                        <circle id="drawCircle" cx="50" cy="250" r="8" fill="#00dbde">
+                            
+                            
+                        </circle>
+                    </svg>
+                </div>
+                <p>SVG line drawing animation with a moving circle. Demonstrates stroke‑dasharray animation techniques.</p>
+                <div class="controls">
+                    <button class="control-btn active" data-action="drawLine">Draw</button>
+                    <button class="control-btn" data-action="resetLine">Reset</button>
+                    <button class="control-btn" data-action="randomLine">Random</button>
+                </div>
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Line Width</span>
+                        <span id="widthValue">4</span>
+                    </div>
+                    <input type="range" min="1" max="10" value="4" class="slider" id="widthSlider">
+                </div>
+            </div>
+            
+            
+            <div class="animation-card">
+                <h2 class="card-title"><i class="fas fa-fill-drip"></i> Gradient Animation</h2>
+                <div class="svg-container" id="gradientContainer">
+                    <svg width="400" height="300" viewBox="0 0 400 300" id="gradientSVG">
+                        <rect width="400" height="300" fill="url(#animatedGradient)" rx="20"></rect>
+                        <defs>
+                            <linearGradient id="animatedGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#00dbde">
+                                    
+                                </stop>
+                                <stop offset="50%" stop-color="#fc00ff">
+                                    
+                                </stop>
+                                <stop offset="100%" stop-color="#fcec03">
+                                    
+                                </stop>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <p>Animated gradient with moving color stops. The gradient shifts and transforms in real‑time using SMIL.</p>
+                <div class="controls">
+                    <button class="control-btn active" data-action="speedUp">Speed Up</button>
+                    <button class="control-btn" data-action="slowDown">Slow Down</button>
+                    <button class="control-btn" data-action="changeColors">Change Colors</button>
+                </div>
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Gradient Angle</span>
+                        <span id="angleValue">45°</span>
+                    </div>
+                    <input type="range" min="0" max="360" value="45" class="slider" id="angleSlider">
+                </div>
+            </div>
+        </div>
+        
+        <div class="svg-showcase">
+            <div class="svg-item">
+                <svg class="svg-icon" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="40" fill="none" stroke="#00dbde" stroke-width="4">
+                        
+                    </circle>
+                </svg>
+                <p>Pulsing Circle</p>
+            </div>
+            <div class="svg-item">
+                <svg class="svg-icon" viewBox="0 0 100 100">
+                    <polygon points="50,10 90,90 10,90" fill="#fc00ff">
+                        <animateTransform attributeName="transform" type="rotate" dur="3s" repeatCount="indefinite"></animateTransform>
+                    </polygon>
+                </svg>
+                <p>Rotating Triangle</p>
+            </div>
+            <div class="svg-item">
+                <svg class="svg-icon" viewBox="0 0 100 100">
+                    <rect x="20" y="20" width="60" height="60" fill="#fcec03" rx="10">
+                        
+                        
+                    </rect>
+                </svg>
+                <p>Breathing Square</p>
+            </div>
+            <div class="svg-item">
+                <svg class="svg-icon" viewBox="0 0 100 100">
+                    <path d="M10,50 Q50,10 90,50 T170,50" fill="none" stroke="#00dbde" stroke-width="4" stroke-dasharray="10">
+                        
+                    </path>
+                </svg>
+                <p>Dashed Wave</p>
+            </div>
+        </div>
+        
+        <div class="info-section">
+            <h2 style="font-family: 'Rubik', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">
+                Superior SVG Animation
+            </h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                File 12/20 demonstrates advanced SVG animation techniques using SMIL, CSS, and JavaScript. 
+                All animations are vector‑based and scale perfectly at any resolution.
+            </p>
+            <div class="range-display">250–2999</div>
+            <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+        </div>
+        
+        <footer class="footer">
+            <p>File 12/20 • Batch 6 • SVG Animation • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>SMIL Animations • Interactive SVG • Vector Graphics • Superior Range Project</p>
+        </footer>
+    </div>
+    
+    
+

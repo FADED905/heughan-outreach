@@ -1,0 +1,94 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>Crypto Dashboard</h1>
+            <p>File #19 of 20 • Real‑time Cryptocurrency Data • heughan‑outreach.com</p>
+            <p>Live cryptocurrency prices, charts, and portfolio tracking with simulated real‑time data.</p>
+        </header>
+        
+        <div class="dashboard-grid">
+            <div class="metric-card">
+                <div class="metric-title">Total Market Cap</div>
+                <div class="metric-value" id="marketCap">$2.4T</div>
+                <div class="metric-change positive" id="marketCapChange">+2.3%</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">24h Volume</div>
+                <div class="metric-value" id="volume">$84.2B</div>
+                <div class="metric-change positive" id="volumeChange">+5.7%</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">BTC Dominance</div>
+                <div class="metric-value" id="btcDominance">52.4%</div>
+                <div class="metric-change negative" id="btcChange">-0.8%</div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-title">Fear &amp; Greed</div>
+                <div class="metric-value" id="fearGreed">68</div>
+                <div class="metric-change positive" id="fearChange">Greed</div>
+            </div>
+        </div>
+        
+        <div class="chart-container">
+            <div class="chart-title">BTC/USD Price Chart (24h)</div>
+            <canvas id="priceChart"></canvas>
+        </div>
+        
+        <div class="crypto-grid">
+            
+        </div>
+        
+        <div class="portfolio-section">
+            <div class="portfolio-title">Portfolio Simulation</div>
+            <div class="portfolio-metrics">
+                <div class="portfolio-metric">
+                    <div class="portfolio-value" id="portfolioValue">$42,568</div>
+                    <div class="portfolio-label">Total Value</div>
+                </div>
+                <div class="portfolio-metric">
+                    <div class="portfolio-value positive" id="portfolioChange">+12.4%</div>
+                    <div class="portfolio-label">24h Change</div>
+                </div>
+                <div class="portfolio-metric">
+                    <div class="portfolio-value" id="portfolioAllocation">5 Assets</div>
+                    <div class="portfolio-label">Diversification</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="control-panel">
+            <div class="control-title">Chart Controls</div>
+            <div class="time-selector">
+                <button class="time-btn active" data-time="1d">1D</button>
+                <button class="time-btn" data-time="7d">7D</button>
+                <button class="time-btn" data-time="30d">30D</button>
+                <button class="time-btn" data-time="90d">90D</button>
+                <button class="time-btn" data-time="1y">1Y</button>
+            </div>
+            <button class="refresh-btn" id="refreshData">Refresh Data</button>
+        </div>
+        
+        <div class="info-panel">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Real‑time Cryptocurrency Dashboard</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                File 19/20 demonstrates real‑time cryptocurrency data visualization with simulated live prices, 
+                interactive charts, and portfolio tracking. Uses Chart.js for visualizations and simulated WebSocket 
+                data. Part of the 250–2999 superior range project.
+            </p>
+            <div class="range-display">250–2999</div>
+            <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+        </div>
+        
+        <footer class="footer">
+            <p>File 19/20 • Crypto Dashboard • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>Chart.js • Real‑time Data • Cryptocurrency • Portfolio • Superior Range Project</p>
+        </footer>
+    </div>
+    
+    <div class="status-indicator">
+        <div class="status-dot"></div>
+        <span>Live Data</span>
+    </div>
+    
+    
+

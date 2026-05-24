@@ -1,0 +1,115 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>WebXR VR/AR</h1>
+            <p>File #17 of 20 • Virtual &amp; Augmented Reality • heughan‑outreach.com</p>
+            <p>Browser‑based VR and AR experiences using WebXR API. Experience immersive 3D environments with optional VR headset support.</p>
+        </header>
+        
+        <div class="xr-section">
+            <div class="xr-container">
+                <canvas id="xrCanvas"></canvas>
+                <div class="xr-overlay">
+                    <h3>WebXR Active</h3>
+                    <p>Mode: <span id="xrMode">Desktop 3D</span></p>
+                    <p>FPS: <span id="xrFPS">60</span> | Objects: <span id="objectCount">12</span></p>
+                </div>
+            </div>
+            
+            <div class="control-panel">
+                <h2 class="panel-title">XR Controls</h2>
+                
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="desktop">Desktop 3D</button>
+                    <button class="mode-btn" data-mode="vr">VR Mode</button>
+                    <button class="mode-btn" data-mode="ar">AR Mode</button>
+                </div>
+                
+                <div class="environment-selector">
+                    <button class="env-btn active" data-env="space">Space Station</button>
+                    <button class="env-btn" data-env="forest">Magic Forest</button>
+                    <button class="env-btn" data-env="city">Cyber City</button>
+                    <button class="env-btn" data-env="abstract">Abstract World</button>
+                </div>
+                
+                <div class="param-sliders">
+                    <h3 class="param-title"><i class="fas fa-sliders-h"></i> Environment Parameters</h3>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Brightness</span>
+                            <span id="brightnessValue">0.7</span>
+                        </div>
+                        <input type="range" min="0" max="1" step="0.05" value="0.7" class="slider" id="brightnessSlider">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Fog Density</span>
+                            <span id="fogValue">0.3</span>
+                        </div>
+                        <input type="range" min="0" max="1" step="0.05" value="0.3" class="slider" id="fogSlider">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Animation Speed</span>
+                            <span id="speedValue">1.0</span>
+                        </div>
+                        <input type="range" min="0" max="2" step="0.1" value="1.0" class="slider" id="speedSlider">
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn" id="enterVRBtn">Enter VR</button>
+                    <button class="action-btn" id="enterARBtn">Enter AR</button>
+                    <button class="action-btn" id="resetViewBtn">Reset View</button>
+                    <button class="action-btn" id="addObjectBtn">Add Object</button>
+                </div>
+                
+                <div class="xr-status">
+                    <div class="status-title">XR System Status</div>
+                    <div class="status-item">
+                        <span class="status-label">WebXR Support</span>
+                        <span class="status-value" id="xrSupport">Checking...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">VR Available</span>
+                        <span class="status-value" id="vrSupport">Checking...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">AR Available</span>
+                        <span class="status-value" id="arSupport">Checking...</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">Render Mode</span>
+                        <span class="status-value" id="renderMode">Three.js</span>
+                    </div>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>⚠️ VR/AR Requirements</h3>
+                    <p>VR requires a compatible headset (Oculus, Vive, etc.). AR requires AR‑core/ARKit on mobile. Desktop 3D works everywhere.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">WebXR Immersive Experiences</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                File 17/20 demonstrates the WebXR API for virtual and augmented reality in the browser. 
+                Experience immersive 3D environments that can be viewed in VR headsets or AR‑enabled devices. 
+                Part of the 250–2999 superior range project.
+            </p>
+            <div class="range-display">250–2999</div>
+            <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+        </div>
+        
+        <footer class="footer">
+            <p>File 17/20 • Batch 9 • WebXR VR/AR • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>Three.js • WebXR API • VR/AR • Immersive 3D • Superior Range Project</p>
+        </footer>
+    </div>
+    
+    
+

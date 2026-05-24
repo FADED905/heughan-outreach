@@ -1,0 +1,84 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>Audio Visualizer</h1>
+            <p>File #11 of 20 • Web Audio API + Canvas • heughan‑outreach.com</p>
+        </header>
+        
+        <div class="visualizer-section">
+            <div class="canvas-container">
+                <canvas id="visualizerCanvas"></canvas>
+                <div class="slider-group" style="margin-top: 1.5rem;">
+                    <div class="slider-label">
+                        <span>Volume</span>
+                        <span id="volumeValue">50%</span>
+                    </div>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="volumeSlider">
+                </div>
+            </div>
+            
+            <div class="controls-panel">
+                <h2 class="control-title">Audio Controls</h2>
+                <div class="audio-controls">
+                    <div class="file-upload" id="fileUpload">
+                        <i class="fas fa-file-audio"></i>
+                        <p>Click to upload audio file</p>
+                        <p style="font-size: 0.9rem; opacity: 0.7;">MP3, WAV, OGG supported</p>
+                        <input type="file" id="audioFile" accept="audio/*" style="display: none;">
+                    </div>
+                    
+                    <div class="preset-buttons">
+                        <button class="preset-btn" data-preset="wave">Waveform</button>
+                        <button class="preset-btn" data-preset="bars">Frequency Bars</button>
+                        <button class="preset-btn" data-preset="circle">Circular</button>
+                        <button class="preset-btn" data-preset="particles">Particles</button>
+                        <button class="preset-btn" data-preset="spectrum">Spectrum</button>
+                        <button class="preset-btn" data-preset="spiral">Spiral</button>
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Visual Sensitivity</span>
+                            <span id="sensitivityValue">75%</span>
+                        </div>
+                        <input type="range" min="10" max="200" value="75" class="slider" id="sensitivitySlider">
+                    </div>
+                    
+                    <div style="display: flex; gap: 1rem;">
+                        <button class="preset-btn" id="playBtn" style="flex: 1;">
+                            <i class="fas fa-play"></i> Play
+                        </button>
+                        <button class="preset-btn" id="pauseBtn" style="flex: 1;">
+                            <i class="fas fa-pause"></i> Pause
+                        </button>
+                        <button class="preset-btn" id="stopBtn" style="flex: 1;">
+                            <i class="fas fa-stop"></i> Stop
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="visualizer-info">
+            <h3>Web Audio API Visualizer</h3>
+            <p>This file uses the Web Audio API to analyze audio in real‑time and render visualizations on a Canvas element. Upload your own audio file or use the preset visualizations.</p>
+            <p>Part of the 250–2999 superior range project. Deployed on Cloudflare Pages via Njalla DNS.</p>
+            
+            <div class="range-display">250–2999</div>
+            
+            <div class="image-grid-audio">
+                <img src="https://i1-e.pinimg.com/736x/31/35/d6/3135d6d61a600a84e50103e90f06ea66.jpg" alt="Audio 1" class="audio-image">
+                <img src="https://i1-e.pinimg.com/736x/aa/cd/17/aacd17496096cbefb8ea86a2ac7223c9.jpg" alt="Audio 2" class="audio-image">
+                <img src="https://i1-e.pinimg.com/736x/17/ed/7a/17ed7a3a2a70e10570093966770550f2.jpg" alt="Audio 3" class="audio-image">
+                <img src="https://i.pinimg.com/736x/f5/50/a5/f550a591b672a7e0ef0c9907009411dd.jpg" alt="Audio 4" class="audio-image">
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>File 11/20 • Batch 6 • Audio Visualizer • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>Web Audio API • Canvas 2D • Real‑time audio analysis</p>
+        </footer>
+    </div>
+    
+    
+

@@ -1,0 +1,118 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>Real‑time Collaboration</h1>
+            <p>File #18 of 20 • WebSocket Collaboration • heughan‑outreach.com</p>
+            <p>Multi‑user collaborative whiteboard with real‑time drawing, chat, and user presence. Works with multiple simultaneous users.</p>
+        </header>
+        
+        <div class="collab-section">
+            <div class="whiteboard-container">
+                <canvas id="whiteboardCanvas"></canvas>
+                <div class="canvas-overlay">
+                    <h3>Collaborative Whiteboard</h3>
+                    <p>Users: <span id="userCount">1</span> | Strokes: <span id="strokeCount">0</span></p>
+                    <p>Tool: <span id="currentTool">Pen</span> | Color: <span id="currentColor">#00c8ff</span></p>
+                </div>
+                <div class="connection-status">
+                    <div class="status-dot" id="connectionStatus"></div>
+                    <span id="connectionText">Connecting...</span>
+                </div>
+            </div>
+            
+            <div class="control-panel">
+                <h2 class="panel-title">Collaboration Tools</h2>
+                
+                <div class="tool-selector">
+                    <button class="tool-btn active" data-tool="pen">Pen</button>
+                    <button class="tool-btn" data-tool="line">Line</button>
+                    <button class="tool-btn" data-tool="rectangle">Rectangle</button>
+                    <button class="tool-btn" data-tool="circle">Circle</button>
+                    <button class="tool-btn" data-tool="text">Text</button>
+                    <button class="tool-btn" data-tool="eraser">Eraser</button>
+                </div>
+                
+                <div class="color-picker">
+                    <div class="color-btn active" style="background: #00c8ff;" data-color="#00c8ff"></div>
+                    <div class="color-btn" style="background: #ff4d8d;" data-color="#ff4d8d"></div>
+                    <div class="color-btn" style="background: #8dff4d;" data-color="#8dff4d"></div>
+                    <div class="color-btn" style="background: #ffd166;" data-color="#ffd166"></div>
+                    <div class="color-btn" style="background: #9d4edd;" data-color="#9d4edd"></div>
+                    <div class="color-btn" style="background: #ff6b6b;" data-color="#ff6b6b"></div>
+                    <div class="color-btn" style="background: #4ecdc4;" data-color="#4ecdc4"></div>
+                    <div class="color-btn" style="background: #ff9a76;" data-color="#ff9a76"></div>
+                    <div class="color-btn" style="background: #a663cc;" data-color="#a663cc"></div>
+                    <div class="color-btn" style="background: #000000;" data-color="#000000"></div>
+                </div>
+                
+                <div class="brush-sliders">
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Brush Size</span>
+                            <span id="brushSizeValue">5px</span>
+                        </div>
+                        <input type="range" min="1" max="50" value="5" class="slider" id="brushSizeSlider">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Opacity</span>
+                            <span id="opacityValue">100%</span>
+                        </div>
+                        <input type="range" min="10" max="100" value="100" class="slider" id="opacitySlider">
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn" id="clearBtn">Clear Canvas</button>
+                    <button class="action-btn" id="undoBtn">Undo</button>
+                    <button class="action-btn" id="saveBtn">Save Image</button>
+                    <button class="action-btn" id="shareBtn">Share Link</button>
+                </div>
+                
+                <div class="users-panel">
+                    <div class="users-title">Active Users</div>
+                    <div class="user-list" id="userList">
+                        <div class="user-item">
+                            <div class="user-color" style="background: #00c8ff;"></div>
+                            <span class="user-name">You</span>
+                            <span class="user-status">●</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="chat-panel">
+                    <div class="chat-title">Collaboration Chat</div>
+                    <div class="chat-messages" id="chatMessages">
+                        <div class="message">
+                            <div class="message-user">System</div>
+                            <div class="message-text">Welcome to the collaborative whiteboard! Invite others to join.</div>
+                        </div>
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="chatInput" placeholder="Type a message...">
+                        <button id="sendBtn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Real‑time WebSocket Collaboration</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                File 18/20 demonstrates real‑time collaboration using WebSockets. Multiple users can draw, chat, 
+                and collaborate simultaneously on the same whiteboard. All data is synchronized in real‑time. 
+                Part of the 250–2999 superior range project.
+            </p>
+            <div class="range-display">250–2999</div>
+            <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+        </div>
+        
+        <footer class="footer">
+            <p>File 18/20 • Batch 9 • Real‑time Collaboration • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>WebSocket • Socket.io • Real‑time Sync • Multi‑user • Superior Range Project</p>
+        </footer>
+    </div>
+    
+    
+

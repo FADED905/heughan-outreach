@@ -1,0 +1,151 @@
+
+    <div class="container">
+        <header class="header">
+            <h1>WebGL Shaders</h1>
+            <p>File #15 of 20 • GLSL Shader Playground • heughan‑outreach.com</p>
+            <p>Real‑time WebGL shader editing with live preview. Write and modify GLSL code directly in the browser.</p>
+        </header>
+        
+        <div class="shader-section">
+            <div class="canvas-container">
+                <canvas id="shaderCanvas"></canvas>
+                <div class="shader-info">
+                    <h3>Shader Active</h3>
+                    <p id="currentShaderName">Plasma Wave</p>
+                    <p>FPS: <span id="fpsCounter">60</span> | Vertices: 10k</p>
+                </div>
+            </div>
+            
+            <div class="editor-panel">
+                <h2 class="panel-title">Shader Editor</h2>
+                
+                <div class="shader-selector">
+                    <button class="shader-btn active" data-shader="plasma">Plasma</button>
+                    <button class="shader-btn" data-shader="noise">Noise</button>
+                    <button class="shader-btn" data-shader="voronoi">Voronoi</button>
+                    <button class="shader-btn" data-shader="mandelbrot">Mandelbrot</button>
+                    <button class="shader-btn" data-shader="ripple">Ripple</button>
+                    <button class="shader-btn" data-shader="custom">Custom</button>
+                </div>
+                
+                <div class="code-editor">
+                    <div class="editor-header">
+                        <span>Fragment Shader (GLSL)</span>
+                        <span id="shaderLines">42 lines</span>
+                    </div>
+                    <textarea id="shaderCode" spellcheck="false">uniform float time;
+uniform vec2 resolution;
+uniform float param1;
+uniform float param2;
+uniform float param3;
+
+void main() {
+    vec2 uv = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
+    
+    float t = time * 0.5;
+    float d = length(uv);
+    
+    // Plasma effect
+    float v = sin(uv.x * 10.0 + t) * sin(uv.y * 10.0 + t);
+    v += sin(uv.x * 20.0 + t * 1.5) * 0.5;
+    v += sin(uv.y * 15.0 + t * 1.2) * 0.3;
+    v += sin(d * 30.0 + t * 2.0) * 0.2;
+    
+    // Color mixing
+    vec3 color = vec3(
+        sin(v * 3.0) * 0.5 + 0.5,
+        sin(v * 4.0 + 2.0) * 0.5 + 0.5,
+        sin(v * 5.0 + 4.0) * 0.5 + 0.5
+    );
+    
+    // Add radial gradient
+    color *= 1.0 - d * 0.5;
+    
+    gl_FragColor = vec4(color, 1.0);
+}</textarea>
+                </div>
+                
+                <div class="param-sliders">
+                    <h3 class="param-title"><i class="fas fa-sliders-h"></i> Shader Parameters</h3>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Frequency</span>
+                            <span id="param1Value">0.5</span>
+                        </div>
+                        <input type="range" min="0" max="1" step="0.01" value="0.5" class="slider" id="param1Slider">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Amplitude</span>
+                            <span id="param2Value">0.7</span>
+                        </div>
+                        <input type="range" min="0" max="1" step="0.01" value="0.7" class="slider" id="param2Slider">
+                    </div>
+                    
+                    <div class="slider-group">
+                        <div class="slider-label">
+                            <span>Speed</span>
+                            <span id="param3Value">0.3</span>
+                        </div>
+                        <input type="range" min="0" max="1" step="0.01" value="0.3" class="slider" id="param3Slider">
+                    </div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn" id="compileBtn">Compile &amp; Run</button>
+                    <button class="action-btn" id="resetBtn">Reset Shader</button>
+                    <button class="action-btn" id="fullscreenBtn">Fullscreen</button>
+                    <button class="action-btn" id="saveBtn">Save Image</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="shader-gallery">
+            <div class="gallery-item" data-shader="plasma">
+                <div class="gallery-preview" style="background: linear-gradient(45deg, #00f3ff, #aa00ff);"></div>
+                <p>Plasma Wave</p>
+            </div>
+            <div class="gallery-item" data-shader="noise">
+                <div class="gallery-preview" style="background: linear-gradient(45deg, #ff00aa, #00ffaa);"></div>
+                <p>Perlin Noise</p>
+            </div>
+            <div class="gallery-item" data-shader="voronoi">
+                <div class="gallery-preview" style="background: linear-gradient(45deg, #aa00ff, #ffaa00);"></div>
+                <p>Voronoi Cells</p>
+            </div>
+            <div class="gallery-item" data-shader="mandelbrot">
+                <div class="gallery-preview" style="background: linear-gradient(45deg, #00aaff, #ff00ff);"></div>
+                <p>Mandelbrot Set</p>
+            </div>
+            <div class="gallery-item" data-shader="ripple">
+                <div class="gallery-preview" style="background: linear-gradient(45deg, #ffaa00, #00ffaa);"></div>
+                <p>Water Ripple</p>
+            </div>
+            <div class="gallery-item" data-shader="custom">
+                <div class="gallery-preview" style="background: linear-gradient(45deg, #ff0066, #6600ff);"></div>
+                <p>Custom Shader</p>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h2 style="font-family: 'Orbitron', sans-serif; font-size: 2.5rem; margin-bottom: 1rem;">
+                WebGL Shader Playground
+            </h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem;">
+                File 15/20 demonstrates real‑time WebGL shader programming. Write GLSL code, adjust parameters, 
+                and see immediate visual feedback. All shaders run directly on your GPU for maximum performance.
+            </p>
+            <div class="range-display">250–2999</div>
+            <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+        </div>
+        
+        <footer class="footer">
+            <p>File 15/20 • Batch 8 • WebGL Shaders • heughan‑outreach.com • Cloudflare Pages + Njalla</p>
+            <p>Three.js • GLSL • WebGL 2.0 • Real‑time Shader Compilation • Superior Range Project</p>
+        </footer>
+    </div>
+    
+    
+

@@ -1,0 +1,101 @@
+
+    <div class="container">
+        <div class="simulation-area">
+            <canvas id="physicsCanvas"></canvas>
+        </div>
+        
+        <div class="control-panel">
+            <div class="panel-header">
+                <h1>Physics Simulation</h1>
+                <p>File #13 of 20 • Matter.js physics engine • heughan‑outreach.com</p>
+            </div>
+            
+            <div class="control-group">
+                <h2 class="control-title"><i class="fas fa-cube"></i> Object Creation</h2>
+                <div class="button-grid">
+                    <button class="control-btn" data-action="addBox">Add Box</button>
+                    <button class="control-btn" data-action="addCircle">Add Circle</button>
+                    <button class="control-btn" data-action="addPolygon">Add Polygon</button>
+                    <button class="control-btn" data-action="addImage">Add Image</button>
+                    <button class="control-btn" data-action="addSpring">Add Spring</button>
+                    <button class="control-btn" data-action="addConstraint">Add Constraint</button>
+                </div>
+                
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Object Size</span>
+                        <span id="sizeValue">40px</span>
+                    </div>
+                    <input type="range" min="10" max="100" value="40" class="slider" id="sizeSlider">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h2 class="control-title"><i class="fas fa-sliders-h"></i> Physics Parameters</h2>
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Gravity</span>
+                        <span id="gravityValue">1.0</span>
+                    </div>
+                    <input type="range" min="0" max="2" step="0.1" value="1.0" class="slider" id="gravitySlider">
+                </div>
+                
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Friction</span>
+                        <span id="frictionValue">0.1</span>
+                    </div>
+                    <input type="range" min="0" max="1" step="0.05" value="0.1" class="slider" id="frictionSlider">
+                </div>
+                
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span>Restitution</span>
+                        <span id="restitutionValue">0.7</span>
+                    </div>
+                    <input type="range" min="0" max="1" step="0.1" value="0.7" class="slider" id="restitutionSlider">
+                </div>
+            </div>
+            
+            <div class="control-group">
+                <h2 class="control-title"><i class="fas fa-gamepad"></i> World Controls</h2>
+                <div class="button-grid">
+                    <button class="control-btn" data-action="clearAll">Clear All</button>
+                    <button class="control-btn" data-action="resetWorld">Reset World</button>
+                    <button class="control-btn" data-action="togglePause">Pause</button>
+                    <button class="control-btn" data-action="explode">Explode!</button>
+                </div>
+            </div>
+            
+            <div class="object-counter">
+                <div class="counter-item">
+                    <div class="counter-number" id="boxCount">0</div>
+                    <div class="counter-label">Boxes</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="circleCount">0</div>
+                    <div class="counter-label">Circles</div>
+                </div>
+                <div class="counter-item">
+                    <div class="counter-number" id="totalCount">0</div>
+                    <div class="counter-label">Total</div>
+                </div>
+            </div>
+            
+            <div class="image-physics">
+                <img src="https://i1-e.pinimg.com/736x/31/35/d6/3135d6d61a600a84e50103e90f06ea66.jpg" alt="Physics 1" class="physics-img" data-image="1">
+                <img src="https://i1-e.pinimg.com/736x/aa/cd/17/aacd17496096cbefb8ea86a2ac7223c9.jpg" alt="Physics 2" class="physics-img" data-image="2">
+                <img src="https://i1-e.pinimg.com/736x/17/ed/7a/17ed7a3a2a70e10570093966770550f2.jpg" alt="Physics 3" class="physics-img" data-image="3">
+                <img src="https://i.pinimg.com/736x/f5/50/a5/f550a591b672a7e0ef0c9907009411dd.jpg" alt="Physics 4" class="physics-img" data-image="4">
+            </div>
+            
+            <div class="footer-info">
+                <p>File 13/20 • Matter.js Physics Engine • Superior Range Project</p>
+                <div class="range-display">250–2999</div>
+                <p>Deployed on Cloudflare Pages via Njalla DNS • heughan‑outreach.com</p>
+            </div>
+        </div>
+    </div>
+    
+    
+
